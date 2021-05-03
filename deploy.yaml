@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: kubia-argo
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: kubia-argo
