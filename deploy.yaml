@@ -4,7 +4,13 @@ metadata:
   name: kubia-argo
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: kubia-argo
   template:
+    metadata:
+      labels:
+        app: kubia-argo
     spec:
       containers:
       - image: luksa/kubia
