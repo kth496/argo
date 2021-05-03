@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubia-argo
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: kubia-argo
+  template:
+    metadata:
+      labels:
+        app: kubia-argo
+    spec:
+      containers:
+      - image: luksa/kubia
+        name: kubia
+        ports:
+        - containerPort: 80
