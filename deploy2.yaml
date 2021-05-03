@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubia-argo-2
+  labels:
+    run: teokkim
 spec:
   replicas: 5
   selector:
@@ -11,7 +13,6 @@ spec:
     metadata:
       labels:
         app: kubia-argo
-        run: teokkim
     spec:
       containers:
       - image: luksa/kubia
